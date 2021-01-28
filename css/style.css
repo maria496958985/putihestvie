@@ -1,0 +1,508 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box; /*убрать скрол боковой для фото*/
+}
+
+a {  /*ссылки */
+    text-decoration: none;  /*убрать подчеркивание ссылок*/
+    color: inherit; /*цвет родителя*/
+    display: inline-block; /*генерирует блочный элемент, который обтекается другими элементами веб-страницы подобно строчному элементу.*/
+}
+
+ul{
+    list-style: none; /*убирает точки в  ссылке*/
+}
+
+
+body {
+    color: #505050;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;  /*Определяет размер шрифта*/
+    line-height: 28px;  /*Определяет размер шрифта*/
+    font-weight: 400;  /*полужирное начертание*/
+}
+
+.container{
+    max-width: 1200px; /*при размере контента 1170+15+15*/
+    margin: 0 auto;  /*центрирование контента*/
+    padding: 0 15px;  /*отступы от края*/
+}
+
+.container-content{  /*теккст куба всегда была привлекательна размер 970*/
+    max-width: 970px;
+    margin: 0 auto; /*центрирование контента*/
+    
+}
+
+.section__line{ /*линия после иконок*/
+    border-bottom: 1px solid rgba(208, 212, 216, .5); /*цвет линии под меню с прозрачностью 0.5 */
+}
+
+.title {
+    font-family: Georgia;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center; /*Выравнивание текста по центру*/
+    color: #4E5665;
+    font-weight: 400;
+   
+}
+
+.header__top {
+    height: 100vh; /* пропорциональное растягивание*/
+    background-repeat: no-repeat; /* не повторять картинку*/
+    background-size: cover ; /* замостить картинку пропорционально*/
+    background-position: center; /* центрировать картинку когда адаптируем*/
+    padding: 40px; /* отступы от краев рамки*/
+}
+
+.heder__top-inner /* рамка */ {
+    border: 2px solid #ECB84C; /* рамка */
+    border-bottom:none; /* убираем рамку снизу*/
+    display: flex; /* переводим в флекс рамку*/
+    flex-direction: column; /* рамку преобразуем в коллонку*/
+    height: 100%; /* до конца кортинки проводится рамка*/
+    color: #fff; /* цвет шрифта*/
+    font-family: Georgia;
+}
+
+.hader__title {
+    font-weight: bold; /*полужирное начертание*/
+    font-size: 200px; /*Определяет размер шрифта*/
+    line-height: 227px; /*межстрочный интервал*/
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);  /*Добавляет тень к тексту*/
+    margin: auto; /*центрирование текста куба*/    
+}
+
+
+.header__text {  /*параграф*/
+    font-size: 24px;  /*Определяет размер шрифта*/
+    line-height: 27px;  /*межстрочный интервал*/
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);  /*Добавляет тень к тексту*/
+    display: flex; /*текст становится по середине и оптикает рамкой*/
+    white-space: nowrap; /*не переносить текст */
+    align-items: center; /*вертикальное центрирование текста */
+    margin-bottom: -12px; /*вертикальное центрирование текста */
+}
+
+
+.header__text::after,  /* после элемента ставить псевдоэлемент рамки */
+.header__text::before{  /* перед элементом ставить псевдоэлемент рамки */
+    content: "";
+    border-top: 2px solid #ECB84C; /* нижняя  рамка */
+    width: 100%; /* ширина  рамки */
+}
+
+.header__text::after{ /* после элемента  */
+    margin-left: 30px; /* отступ слева рамки до текста*/
+}
+
+.header__text::before{  /* перед элементом  */
+    margin-right: 30px; /*отступ справа рамки до текста */
+}
+
+.menu {
+    border-bottom: 1px solid rgba(208, 212, 216, .5); /*цвет линии под меню с прозрачностью 0.5 */
+}
+
+.menu__list {
+    display: flex;  /*меню в одну линию */
+    justify-content: center; /*меню встало по центру*/
+    align-items: center; /* выравнивает флекс-элементы внутри контейнера*/
+}
+
+
+
+.menu__list-link {
+    font-weight: bold; /*полужирное начертание*/
+    font-size: 14px; /*Определяет размер шрифта*/
+    line-height: 19px; /*межстрочный интервал*/
+    padding: 24px 10px 20px; /*отступы вневнии  сверху слева и справа меню подчеркивания*/
+    color: #909090;  /*цвет шрифта меню*/
+    margin: 0 6px ; /*отступы внутринии меню до  подчеркивания*/
+    border-bottom: 4px solid transparent;  /*создаем всевдо чтобы не было при наведении колебаний пунктов меню*/
+    transition: all .5s;  /*плавное навидение на пункты меню*/
+}
+
+.menu__list-link:hover{
+    color: #4E5665; /*цвет при наведении на меню*/
+    border-bottom: 4px solid #ECB84C; /*цвет подчеркивания меню пунктов*/
+}
+
+.reason {  /*блок с описание кубы*/
+    padding: 80px 0 0; /*внешнии отступы сверху от меню и снизу*/
+}
+
+.reason__title {
+    
+    margin-bottom: 22px; /*отступ название до параграфа*/
+}
+
+
+.reason__link {
+    text-align: right; /*ссылку отправить в правую сторону*/
+    
+}
+
+.reason__link a {
+    font-weight: bold;  /*полужирное начертание*/
+    color: #ECB84C; /*цвет ссылки*/
+    margin-bottom: 36px;  /*отступ от сылки до иконок*/
+}
+
+
+.reason__statistics {
+    display: flex; /*выравнивани е в одну строку*/
+    justify-content: space-around; /*выравнивани равномерное*/
+    align-items: center; /*выравниваниt по центру выравниваются по линии поперечной оси.*/
+    text-align: center; /*выравниваниt по центру текста и иконок.*/
+    padding-bottom: 80px; /*отступ вниз до линии*/
+     
+}
+
+
+.reason__statistics-num { /*текст 1,920*/
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+    color: #4E5665;
+    margin-top: 32px;
+    align-items: center; /*выравнивание по центру*/
+}
+
+
+.reason__statistics-text { /*текст Trips*/
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #909090;
+}
+
+.about {
+    padding: 80px 0 0;
+}
+
+
+.about__title {
+    margin-bottom: 13px;
+}
+.about__text {
+margin-bottom: 72px;
+}
+
+
+.about__preview {
+}
+.about__preview-title {
+    margin-bottom: 38px;
+    font-family: Georgia;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 38px;
+    margin: 0 auto;
+    text-align:center
+}
+
+.about__images-box {
+    padding-top: 111px;
+    position: relative;
+}
+.about__preview-text {
+    margin: 53px auto 80px;
+}
+
+.about__dot{ /* большой кружок на машине  */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(236, 184, 76, .75);
+    cursor: pointer; /* кликабельность  */
+    position: absolute;
+    
+}
+
+.about__dot::before{
+    content: "";
+    background-image: url(../img/Path.svg);
+    width: 244px;
+    height: 122px;
+    position: absolute;
+    top: -119px;
+    left: 23px;
+    display: none;
+}
+
+.about__dot:hover::before{
+    display: block;
+
+}
+
+.about__dot:hover:hover .about__dot-text{
+    display: block;
+}
+
+.about__dot-text{
+    
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    position: absolute;
+    color: #505050;
+    top: -151px;
+    left: 146px;
+    white-space: nowrap;
+    display: none;
+}
+
+.about__dot--criha {
+    top: 185px;
+    right: 38px; 
+}
+
+
+.about__dot--dver {
+    top: 226px;
+    left: 495px;
+}
+
+
+.about__dot--capot {
+    top: 223px;
+    left: 154px;
+}
+
+
+.about__dot--coleso {
+    bottom: 36px;
+    left: 836px;
+}
+
+.about__dot::after{  /* маленький кружок на машине  */
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffd600;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about__item {
+    margin-bottom: 100px;
+    padding: 70px 0;  /*  заездание блока на картинку сверху и  снизу по 70*/
+    background-repeat: no-repeat; /* чтобы не повторялась картинка*/
+    background-position: right;  /* отнести картинку в правую часть*/
+}
+
+
+.about__box { /*  бокс Историческое наследие<*/
+    padding: 33px 40px ;
+    background-color: #fff;
+    position: relative;  /*относительное позиционирование*/
+    max-width: 470px; /* ширина бокса */
+}
+
+.about__box::after, /* элементы декора  галочки */
+.about__box::before {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 33px;
+}
+
+.about__box::after{/* после элемента ставить псевдоэлемент рамки */
+    border-top: 3px solid #ECB84C;
+    border-left: 3px solid #ECB84C;
+    top: 19px;
+    left: 19px;
+}
+
+.about__box::before {   /* перед элементом ставить псевдоэлемент рамки */  
+    border-bottom: 3px solid #ECB84C;
+    border-right: 3px solid #ECB84C;
+    bottom: 19px;
+    right:  19px;
+    
+
+}
+
+.about__box-title {  /* параграф*/
+    font-size: 24px;
+    line-height: 25px;
+    font-family: Georgia;
+    color: #4E5665;
+    margin-bottom: 20px;
+
+}  
+
+
+.about__item:nth-child(even){ /* четные элементы не четные вместо even будет odd */
+    background-position: left;   /* для картинки*/
+}
+
+.about__item:nth-child(even) .about__box{
+    margin-left: auto;   /* для текста*/
+}
+
+/* .about__item:nth-child(even).about__box::before{
+    right: 19px;   
+    left: auto ;
+    background-image: none;
+    border-right: 3px solid #ECB84C;
+    border-top: 3px solid #ECB84C;
+
+}
+
+.about__item:nth-child(even).about__box::after{
+    left: 19px;   
+    border-right: none ;
+    border-left: 3px solid #ECB84C;
+} */
+
+/* .photo{
+    padding: 50px 0;
+} */
+
+
+.photo__title {
+    margin-bottom: 42px;
+}
+  
+
+
+.photo__text { /*текст пораграфа*/
+    padding-bottom:  48px;  /*отступ сверзу*/
+    margin-bottom: 56px;  /*отступ снизу*/
+    position: relative;
+
+}
+
+.photo__text::after {
+    content: "";
+    width: 270px;
+    height: 1px;
+    background-color: rgba(208, 212, 216, .5); /*цвет линии под текстом с прозрачностью 0.5 */;
+    position: absolute;
+    bottom: 0; /*линию прижали к низу текста*/
+    margin: 0 auto;  /*линию встала по центру*/
+}    
+
+.photo__slaider{ 
+    max-width: 640px;
+    margin: 0 auto;
+
+}
+
+
+.slick-arrow{
+    border: none;
+    border-radius: 50% ;
+    width: 40px;
+    height: 40px;
+    background-color: #ECB84C;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+}
+
+.slick-prev{
+    left: -20px;
+}
+
+.slick-next{
+    right: -20px;
+}
+
+.footer {
+    background:#f8f8f8;
+    padding: 55px 0 32px;
+
+}
+
+.footer__item-list{
+    
+    padding-left: 0px;
+
+}
+
+.footer__items {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+
+
+
+.footer__item-title {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    color: #4E5665;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Преобразует все символы в верхний регистр. */
+    text-align: left;
+}
+
+
+
+.footer__item-link {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 8px;    
+}
+
+.footer__item-link--social{
+    padding-left: 28px;
+    position: relative;
+}
+
+.footer__item-link--social::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+}
+
+
+
+.footer__item-link--maseg::before {
+    background-image: url(../img/maseg.svg);
+    width: 17px;
+    top: 1px;
+}
+
+
+.footer__item-link--facebook::before {
+    background-image: url(../img/Facebook.svg);
+}
+
+
+.footer__item-link--instagram::before {
+    background-image: url(../img/Instagram.svg);
+}
+
+
+.footer__item-link--youtube::before {
+    background-image: url(../img/YouTube.svg);
+}
+
+
+.footer__item-link--email::before {
+    background-image: url(../img/email.svg);
+    top: 2px;
+    height: 13px;
+}
+
+.footer__copy {
+    padding-top: 40px;
+    text-align: center;
+    font-style: 14px;
+    list-style: 19px;
+}
